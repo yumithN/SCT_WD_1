@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Experience a cutting-edge interactive navigation menu featuring real-time scroll color shifts, smooth hover states, responsive mobile drawer, and dynamic styling.">
+  <title>AuraNav - Interactive Navigation Menu Showcase</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       FIXED INTERACTIVE NAVIGATION MENU
+       ========================================================================== -->
+  <header class="navbar-header" id="mainNavbar">
+    <div class="navbar-container">
+      <!-- Brand / Logo -->
+      <a href="index.html" class="navbar-brand" id="brandLogo">
+        <div class="brand-icon">⚡</div>
+        <div class="brand-text">Aura<span>Nav</span></div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="navbar-menu" aria-label="Main Navigation">
+        <div class="nav-item">
+          <a href="#hero" class="nav-link active" id="navLinkHome">Home</a>
+        </div>
+
+        <div class="nav-item">
+          <a href="#features" class="nav-link" id="navLinkFeatures">Features</a>
+        </div>
+
+        <!-- Dropdown Menu Item -->
+        <div class="nav-item has-dropdown">
+          <a href="services.html" class="nav-link" id="navLinkServices">
+            Services
+            <svg class="dropdown-chevron" viewBox="0 0 24 24">
+              <path d="M7 10l5 5 5-5z"/>
+            </svg>
+          </a>
+          <div class="dropdown-menu" id="servicesDropdown">
+            <a href="services.html#ui-ux" class="dropdown-item">
+              <div class="dropdown-icon-box">🎨</div>
+              <div>
+                <div class="dropdown-item-title">UI/UX Crafting <span class="badge-pill">Hot</span></div>
+                <div class="dropdown-item-desc">Glassmorphism & micro-interactions</div>
+              </div>
+            </a>
+            <a href="services.html#web-dev" class="dropdown-item">
+              <div class="dropdown-icon-box">🚀</div>
+              <div>
+                <div class="dropdown-item-title">Fullstack Web</div>
+                <div class="dropdown-item-desc">High performance scalable architectures</div>
+              </div>
+            </a>
+            <a href="services.html#cloud-ops" class="dropdown-item">
+              <div class="dropdown-icon-box">☁️</div>
+              <div>
+                <div class="dropdown-item-title">Cloud Solutions <span class="badge-pill">New</span></div>
+                <div class="dropdown-item-desc">Serverless & low latency deployments</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="#demo" class="nav-link" id="navLinkDemo">Interactive Lab</a>
+        </div>
+
+        <div class="nav-item">
+          <a href="#stats" class="nav-link" id="navLinkStats">Metrics</a>
+        </div>
+
+        <div class="nav-item">
+          <a href="about.html" class="nav-link" id="navLinkAbout">About</a>
+        </div>
+
+        <div class="nav-item">
+          <a href="contact.html" class="nav-link" id="navLinkContact">Contact</a>
+        </div>
+      </nav>
+
+      <!-- Navbar Right Actions -->
+      <div class="navbar-actions">
+        <!-- Theme Toggle Button -->
+        <button class="theme-toggle-btn" id="themeToggle" title="Toggle Light / Dark theme" aria-label="Toggle Theme">
+          <!-- Sun Icon (Default in Dark Mode) -->
+          <svg id="themeIconSun" viewBox="0 0 24 24">
+            <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/>
+          </svg>
+          <!-- Moon Icon (Hidden in Dark Mode) -->
+          <svg id="themeIconMoon" viewBox="0 0 24 24" style="display: none;">
+            <path d="M12.3 2a10 10 0 0 0-.19 14 10 10 0 0 0 11.89.8 1 1 0 0 0 .3-1.12 1 1 0 0 0-.8-.68 8 8 0 0 1-6.1-8 8 8 0 0 1 4.58-7.23 1 1 0 0 0 .52-.88 1 1 0 0 0-.8-.92A10.29 10.29 0 0 0 12.3 2z"/>
+          </svg>
+        </button>
+
+        <!-- CTA Action Button -->
+        <a href="#demo" class="btn-cta" id="ctaBtn">
+          <span>Get Started</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="mobile-toggle-btn" id="mobileToggle" aria-label="Toggle Navigation Drawer" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Dynamic Scroll Progress Indicator -->
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+  </header>
+
+  <!-- Mobile Drawer & Backdrop -->
+  <div class="mobile-backdrop" id="mobileBackdrop"></div>
+  <aside class="mobile-menu-drawer" id="mobileDrawer" aria-label="Mobile Menu">
+    <div class="mobile-nav-list">
+      <a href="#hero" class="mobile-nav-link active">Home <span>→</span></a>
+      <a href="#features" class="mobile-nav-link">Features <span>→</span></a>
+      <a href="services.html" class="mobile-nav-link">Services <span>→</span></a>
+      <a href="#demo" class="mobile-nav-link">Interactive Lab <span>→</span></a>
+      <a href="#stats" class="mobile-nav-link">Metrics <span>→</span></a>
+      <a href="about.html" class="mobile-nav-link">About Us <span>→</span></a>
+      <a href="contact.html" class="mobile-nav-link">Contact <span>→</span></a>
+    </div>
+    <div>
+      <a href="contact.html" class="btn-cta" style="display: flex; justify-content: center; width: 100%;">Get in Touch</a>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       PAGE CONTENT
+       ========================================================================== -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="badge-tag">
+            <span class="badge-tag-pulse"></span>
+            Task 1: Interactive Navigation Menu
+          </div>
+          <h1 class="hero-title">
+            Dynamic Navigation <br><span class="gradient-text">Engineered to Impress</span>
+          </h1>
+          <p class="hero-subtitle">
+            A fixed-position navigation header with real-time scroll metamorphosis, glassmorphic frosted elevation, pill hover glow transitions, and responsive multi-page architecture.
+          </p>
+          <div class="hero-buttons">
+            <a href="#demo" class="btn-cta">Test Scroll Transitions</a>
+            <a href="#features" class="btn-secondary">Explore Features</a>
+          </div>
+
+          <!-- Interactive Control Lab Preview Card -->
+          <div class="demo-controller-card" id="demo">
+            <div class="controller-header">
+              <div class="controller-title">
+                <span>🎛️ Navigation Live Inspector</span>
+              </div>
+              <div class="controller-status">
+                Scroll: <span id="liveScrollValue">0px</span> | State: <span id="liveNavState">Translucent Top</span>
+              </div>
+            </div>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem;">
+              Test the navbar behavior manually below, or scroll the page up and down to observe the automatic color and height transformation!
+            </p>
+            <div class="controller-controls">
+              <button class="control-pill-btn active" onclick="setNavbarStyleMode('auto', this)">Auto (On Scroll > 40px)</button>
+              <button class="control-pill-btn" onclick="setNavbarStyleMode('force-scrolled', this)">Force Scrolled Style</button>
+              <button class="control-pill-btn" onclick="setNavbarStyleMode('force-transparent', this)">Force Top Style</button>
+              <button class="control-pill-btn accent-btn active" onclick="setAccentTheme('cyber-cyan', this)">Cyber Cyan</button>
+              <button class="control-pill-btn accent-btn" onclick="setAccentTheme('neon-purple', this)">Neon Purple</button>
+              <button class="control-pill-btn accent-btn" onclick="setAccentTheme('sunset-amber', this)">Sunset Amber</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Key Capabilities</span>
+          <h2 class="section-title">Engineered for Smooth Interaction</h2>
+          <p class="section-description">
+            Experience how modern CSS custom properties and JavaScript scroll listeners deliver instant visual feedback.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="feature-card">
+            <div class="card-icon">📌</div>
+            <h3 class="card-title">Fixed Positioning</h3>
+            <p class="card-text">
+              The navbar remains seamlessly pinned to the top across every page with high z-index layering and zero layout shift.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="card-icon">🌊</div>
+            <h3 class="card-title">Scroll Transformation</h3>
+            <p class="card-text">
+              Smoothly condenses height, deepens backdrop blur, adds glowing bottom borders, and introduces an elevation shadow upon scroll.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="card-icon">✨</div>
+            <h3 class="card-title">Dynamic Hover States</h3>
+            <p class="card-text">
+              Subtle magnetic hover pills, expanding gradient underlines, and animated dropdowns that react instantly to cursor interaction.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="card-icon">📊</div>
+            <h3 class="card-title">Scroll Progress Bar</h3>
+            <p class="card-text">
+              An ultra-sleek neon gradient progress bar integrated directly into the navbar base to indicate scroll position in real time.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="card-icon">📱</div>
+            <h3 class="card-title">Responsive Drawer</h3>
+            <p class="card-text">
+              An animated hamburger icon that morphs into an 'X', revealing a slide-in glassmorphic drawer for seamless mobile browsing.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="card-icon">🌗</div>
+            <h3 class="card-title">Dark & Light Themes</h3>
+            <p class="card-text">
+              Complete theme switching with persistent localStorage memory, silky smooth transitions, and custom HSL color palettes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Metrics Banner Section -->
+    <section class="section" id="stats">
+      <div class="container">
+        <div class="stats-banner">
+          <div class="stat-item">
+            <div class="stat-item-number">60 FPS</div>
+            <div class="stat-item-label">Scroll Animation Rate</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-item-number">&lt; 15ms</div>
+            <div class="stat-item-label">Interaction Latency</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-item-number">100%</div>
+            <div class="stat-item-label">Responsive Fidelity</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-item-number">0 KB</div>
+            <div class="stat-item-label">External Heavy Frameworks</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="section">
+      <div class="container">
+        <div style="background: var(--bg-card); border: 1px solid rgba(0, 242, 254, 0.25); border-radius: var(--radius-lg); padding: 4rem 2rem; text-align: center; position: relative; overflow: hidden;">
+          <h2 style="font-size: 2.4rem; margin-bottom: 1rem;">Experience Multi-Page Navigation</h2>
+          <p style="color: var(--text-secondary); max-width: 580px; margin: 0 auto 2rem; font-size: 1.05rem;">
+            Test the fixed navbar on our other pages to confirm persistent visibility, dynamic active states, and styling consistency.
+          </p>
+          <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <a href="about.html" class="btn-cta">Visit About Page</a>
+            <a href="services.html" class="btn-secondary">Explore Services</a>
+            <a href="contact.html" class="btn-secondary">Contact Form</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="navbar-brand">
+            <div class="brand-icon">⚡</div>
+            <div class="brand-text">Aura<span>Nav</span></div>
+          </div>
+          <p>Next-generation interactive web navigation components crafted with pure modern HTML5, CSS3, and JavaScript.</p>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Features</h4>
+          <ul>
+            <li><a href="#hero">Fixed Positioning</a></li>
+            <li><a href="#features">Scroll Metamorphosis</a></li>
+            <li><a href="#demo">Interactive Lab</a></li>
+            <li><a href="#stats">Performance Metrics</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="contact.html">Get in Touch</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 AuraNav Interactive Web Solutions. All rights reserved. Built for SkillCraft Technology.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>

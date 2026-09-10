@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore AuraNav's specialized web engineering services, including UI/UX design, fullstack development, and cloud solutions.">
+  <title>Services - AuraNav</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       FIXED INTERACTIVE NAVIGATION MENU
+       ========================================================================== -->
+  <header class="navbar-header" id="mainNavbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-brand" id="brandLogo">
+        <div class="brand-icon">⚡</div>
+        <div class="brand-text">Aura<span>Nav</span></div>
+      </a>
+
+      <nav class="navbar-menu" aria-label="Main Navigation">
+        <div class="nav-item">
+          <a href="index.html" class="nav-link" id="navLinkHome">Home</a>
+        </div>
+        <div class="nav-item">
+          <a href="index.html#features" class="nav-link" id="navLinkFeatures">Features</a>
+        </div>
+        <div class="nav-item has-dropdown">
+          <a href="services.html" class="nav-link active" id="navLinkServices">
+            Services
+            <svg class="dropdown-chevron" viewBox="0 0 24 24">
+              <path d="M7 10l5 5 5-5z"/>
+            </svg>
+          </a>
+          <div class="dropdown-menu" id="servicesDropdown">
+            <a href="services.html#ui-ux" class="dropdown-item">
+              <div class="dropdown-icon-box">🎨</div>
+              <div>
+                <div class="dropdown-item-title">UI/UX Crafting <span class="badge-pill">Hot</span></div>
+                <div class="dropdown-item-desc">Glassmorphism & micro-interactions</div>
+              </div>
+            </a>
+            <a href="services.html#web-dev" class="dropdown-item">
+              <div class="dropdown-icon-box">🚀</div>
+              <div>
+                <div class="dropdown-item-title">Fullstack Web</div>
+                <div class="dropdown-item-desc">High performance scalable architectures</div>
+              </div>
+            </a>
+            <a href="services.html#cloud-ops" class="dropdown-item">
+              <div class="dropdown-icon-box">☁️</div>
+              <div>
+                <div class="dropdown-item-title">Cloud Solutions <span class="badge-pill">New</span></div>
+                <div class="dropdown-item-desc">Serverless & low latency deployments</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="index.html#demo" class="nav-link" id="navLinkDemo">Interactive Lab</a>
+        </div>
+        <div class="nav-item">
+          <a href="index.html#stats" class="nav-link" id="navLinkStats">Metrics</a>
+        </div>
+        <div class="nav-item">
+          <a href="about.html" class="nav-link" id="navLinkAbout">About</a>
+        </div>
+        <div class="nav-item">
+          <a href="contact.html" class="nav-link" id="navLinkContact">Contact</a>
+        </div>
+      </nav>
+
+      <div class="navbar-actions">
+        <button class="theme-toggle-btn" id="themeToggle" title="Toggle Light / Dark theme" aria-label="Toggle Theme">
+          <svg id="themeIconSun" viewBox="0 0 24 24">
+            <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/>
+          </svg>
+          <svg id="themeIconMoon" viewBox="0 0 24 24" style="display: none;">
+            <path d="M12.3 2a10 10 0 0 0-.19 14 10 10 0 0 0 11.89.8 1 1 0 0 0 .3-1.12 1 1 0 0 0-.8-.68 8 8 0 0 1-6.1-8 8 8 0 0 1 4.58-7.23 1 1 0 0 0 .52-.88 1 1 0 0 0-.8-.92A10.29 10.29 0 0 0 12.3 2z"/>
+          </svg>
+        </button>
+        <a href="contact.html" class="btn-cta">
+          <span>Get Quote</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <button class="mobile-toggle-btn" id="mobileToggle" aria-label="Toggle Navigation Drawer" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-backdrop" id="mobileBackdrop"></div>
+  <aside class="mobile-menu-drawer" id="mobileDrawer" aria-label="Mobile Menu">
+    <div class="mobile-nav-list">
+      <a href="index.html" class="mobile-nav-link">Home <span>→</span></a>
+      <a href="index.html#features" class="mobile-nav-link">Features <span>→</span></a>
+      <a href="services.html" class="mobile-nav-link active">Services <span>→</span></a>
+      <a href="index.html#demo" class="mobile-nav-link">Interactive Lab <span>→</span></a>
+      <a href="index.html#stats" class="mobile-nav-link">Metrics <span>→</span></a>
+      <a href="about.html" class="mobile-nav-link">About Us <span>→</span></a>
+      <a href="contact.html" class="mobile-nav-link">Contact <span>→</span></a>
+    </div>
+    <div>
+      <a href="contact.html" class="btn-cta" style="display: flex; justify-content: center; width: 100%;">Get in Touch</a>
+    </div>
+  </aside>
+
+  <!-- Content -->
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="section-tag">Capabilities & Services</span>
+        <h1 class="hero-title">High-Velocity <br><span class="gradient-text">Engineering Services</span></h1>
+        <p class="hero-subtitle">
+          From custom UI navigation components to full-stack web platforms and cloud scaling.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="ui-ux" style="padding-top: 1rem;">
+      <div class="container">
+        <div class="grid-3">
+          <div class="feature-card">
+            <div class="card-icon">🎨</div>
+            <h3 class="card-title">UI/UX Architecture</h3>
+            <p class="card-text">
+              Design systems, custom interactive components (navbars, drawers, modals), and fluid micro-animations tailored to your brand identity.
+            </p>
+          </div>
+
+          <div class="feature-card" id="web-dev">
+            <div class="card-icon">🚀</div>
+            <h3 class="card-title">Modern Web Development</h3>
+            <p class="card-text">
+              Clean, modular, and maintainable vanilla codebases that deliver ultra-fast load times and seamless cross-device compatibility.
+            </p>
+          </div>
+
+          <div class="feature-card" id="cloud-ops">
+            <div class="card-icon">☁️</div>
+            <h3 class="card-title">Cloud Infrastructure</h3>
+            <p class="card-text">
+              Automated pipelines, CDN acceleration, static asset optimization, and live-reload development environments.
+            </p>
+          </div>
+        </div>
+
+        <div style="margin-top: 5rem;">
+          <h2 style="font-size: 2.2rem; text-align: center; margin-bottom: 2rem;">Extended Showcase (Test Navbar Scrolling)</h2>
+          <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <div style="background: var(--bg-card); padding: 2.5rem; border-radius: var(--radius-lg); border: 1px solid rgba(255, 255, 255, 0.08);">
+              <h3>1. Fixed Positioning Demonstration</h3>
+              <p style="color: var(--text-secondary); margin-top: 0.5rem;">The navigation bar stays anchored at the exact top viewport boundary with <code>z-index: 1000</code>, ensuring zero interruption as you browse long pages.</p>
+            </div>
+            <div style="background: var(--bg-card); padding: 2.5rem; border-radius: var(--radius-lg); border: 1px solid rgba(255, 255, 255, 0.08);">
+              <h3>2. Scroll Color Shift Demonstration</h3>
+              <p style="color: var(--text-secondary); margin-top: 0.5rem;">Notice the transition from a breezy translucent header to a high-density frosted glass bar with cyber cyan border accents as you move beyond 40px scroll depth.</p>
+            </div>
+            <div style="background: var(--bg-card); padding: 2.5rem; border-radius: var(--radius-lg); border: 1px solid rgba(255, 255, 255, 0.08);">
+              <h3>3. Hover States & Dropdown Animation</h3>
+              <p style="color: var(--text-secondary); margin-top: 0.5rem;">Hover your mouse over any menu item at the top right now to test the slide-in underline and the glowing Services dropdown card!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="navbar-brand">
+            <div class="brand-icon">⚡</div>
+            <div class="brand-text">Aura<span>Nav</span></div>
+          </div>
+          <p>Next-generation interactive web navigation components crafted with pure modern HTML5, CSS3, and JavaScript.</p>
+        </div>
+        <div class="footer-links-group">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="contact.html">Get in Touch</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 AuraNav Interactive Web Solutions. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>
